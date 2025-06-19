@@ -35,10 +35,10 @@ func Road(arr []rune) []rune {
 					x++
 				}
 				r = r[:j]
-				Map[[2]int{x, y}] = 0
 				if x == xs && y == ys {
 					break
 				}
+				Map[[2]int{x, y}] = 0
 			}
 		}
 		Map[[2]int{x, y}] = 1

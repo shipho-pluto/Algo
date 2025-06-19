@@ -15,8 +15,6 @@ func QuickSort(arr []int, left, right int) {
 func Part(arr []int, left, right int) int {
 	r := right
 	l := left
-
-	// меняем местами элемент больше опорного на элемент меньше опорного, чтобы получить 2 части
 	pivot := arr[l]
 	for l <= r {
 		for ; arr[l] < pivot; l++ {

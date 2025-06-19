@@ -68,7 +68,7 @@ func sts(str, pod string) int { // O(m) + 26
 		if maskP[prev] == maskW[prev] {
 			eq--
 		}
-		maskW[prev] += 1
+		maskW[prev]++
 		if maskP[prev] == maskW[prev] {
 			eq++
 		}
@@ -77,21 +77,20 @@ func sts(str, pod string) int { // O(m) + 26
 		if maskP[post] == maskW[post] {
 			eq--
 		}
-		maskW[post] -= 1
+		maskW[post]--
 		if maskP[post] == maskW[post] {
 			eq++
 		}
 
 		if eq == 26 {
-			return i - n + 1
+			return i
 		}
 	}
 	return -1
 }
 
 func main() {
-	a := "babbsda"
+	a := "aaaaaaababbsda"
 	p := "bab"
 	fmt.Println(StringInString(a, p))
-	fmt.Println(sts(a, p))
 }
