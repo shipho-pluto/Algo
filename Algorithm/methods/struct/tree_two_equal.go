@@ -1,9 +1,27 @@
 package main
 
-import t "Algoritm/Algorithm/methods/struct/Structs"
+import (
+	t "Algoritm/Algorithm/methods/struct/Structs"
+	"fmt"
+)
 
 func main() {
+	tree := &t.Tree{Value: 'a',
+		Left: &t.Tree{Value: 'b',
+			Left: &t.Tree{Value: 't'},
+			Right: &t.Tree{Value: 'u',
+				Right: &t.Tree{Value: 'e'},
+			},
+		},
+		Right: &t.Tree{Value: 'a',
+			Left: &t.Tree{Value: 'b',
+				Left:  &t.Tree{Value: 'c'},
+				Right: &t.Tree{Value: 'd'},
+			},
+		},
+	}
 
+	fmt.Println(returnTwoTree(tree))
 }
 
 func walkForTree(st *map[int][2]*t.Tree, root *t.Tree) int {
@@ -11,7 +29,7 @@ func walkForTree(st *map[int][2]*t.Tree, root *t.Tree) int {
 		return 0
 	}
 
-	ans := 1 << (root.Value - 'A')
+	ans := 1 << (root.Value - 'a')
 	ans |= walkForTree(st, root.Left)
 	ans |= walkForTree(st, root.Right)
 

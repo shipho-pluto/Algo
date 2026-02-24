@@ -50,7 +50,7 @@ func mergeChan(chans ...chan int) <-chan int {
 		}
 	}()
 
-	for range 5 {
+	for range 1200 {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()

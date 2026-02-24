@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	n1, n2 := "19", "1"
+	n1, n2 := "19", "100"
 	fmt.Println(sumIn16cc(n1, n2))
 }
 

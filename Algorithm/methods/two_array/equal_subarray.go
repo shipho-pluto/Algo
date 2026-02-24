@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	arr1, arr2 := []int{1, 3, -4, 0, 1}, []int{-1, 4, 6, 0, 1, 1}
+	arr1, arr2 := []int{1, 3, -4, 0, 1}, []int{-1, 4, 6, 0, 1}
 	fmt.Println(esMap(arr1, arr2))
-	arr1, arr2 = []int{1, 3, -4, 0, 1}, []int{0, -4}
+	arr1, arr2 = []int{1, 3, -4, 0, 1}, []int{0, -4, 0}
 	fmt.Println(es(arr1, arr2))
 }
 

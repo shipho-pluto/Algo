@@ -4,12 +4,11 @@ import "fmt"
 
 func main() {
 	dictionary := []string{
-		"aboba", "roar", "bound", "fade", "light", "power", "graduation", "lop", "donda",
+		"i", "am", "have", "you", "we", "are", "siblings", "program", "language", "go", "work",
 	}
 	text := []string{
-		"aboba", "abob", "abo", "dona", "fad", "fadee", "roar", "roa",
+		"i", "am", "yuo", "programm", "languje", "go", "works",
 	}
-
 	fmt.Println(cntRightWords(text, dictionary))
 }
 

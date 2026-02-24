@@ -20,10 +20,11 @@ func compressDigits(arr []int) string {
 		prev = l
 		for ; r < n && arr[r] == arr[l]+1; l, r = l+1, r+1 {
 		}
+		res += strconv.Itoa(arr[prev])
 		if r-prev == 1 {
-			res += strconv.Itoa(arr[l]) + ","
+			res += ","
 		} else {
-			res += strconv.Itoa(arr[prev]) + "-" + strconv.Itoa(arr[r-1]) + ","
+			res += "-" + strconv.Itoa(arr[r-1]) + ","
 		}
 	}
 

@@ -19,6 +19,6 @@ func findTarget(arr []int, target int) (int, int) {
 }
 
 func main() {
-	arr := []int{9, 6, 5, 1, 4, 2}
+	arr := []int{10, 6, 5, 1, 4, 2}
 	fmt.Println(findTarget(arr, 10))
 }

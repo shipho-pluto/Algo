@@ -16,6 +16,11 @@ type er struct {
 	msg string
 }
 
+func (e er) Error() string {
+	//TODO implement me
+	panic(e.msg)
+}
+
 func (e er) String() string {
 	return e.msg
 }
@@ -45,25 +50,25 @@ func main() {
 	fmt.Println(c)
 	fmt.Println(*d)
 
-	/*
-		var err1 error -> {type = nil, data = nil}, bc error = interface
-		fmt.Println(isNil(err1)) // true
+	var err1 error           // -> {type = nil, data = nil}, bc error = interface
+	fmt.Println(isNil(err1)) // true
 
-		var err2 *er -> {type = er, data = nil}, bc er = struct
-		fmt.Println(isNil(err1)) // false
+	var err2 *er             // -> {type = nil, data = nil}, bc er = struct
+	fmt.Println(isNil(err2)) // -> {type = er, data = nil}, bc er = struct (false)
+	var e *er
+	fmt.Println(e == nil) // true
 
-		err2 = &er{msg : "hi"} -> {type = er, data = "hi"}, bc er = struct
-		fmt.Println(isNil(err1)) // false
+	err2 = &er{msg: "hi"}    // -> {type = er, data = "hi"}, bc er = struct
+	fmt.Println(isNil(err2)) // false
 
-		err2 = nil -> {type = er, data = nil}, bc delete only data
-		fmt,Println(isNil(er22)) // false
+	err2 = nil               // -> {type = er, data = nil}, bc delete only data
+	fmt.Println(isNil(err2)) // false
 
-		err1 = err2 -> {type = er, data = nil}, потому что мы положили типизированный интерфейс
-		fmt.Println(isNil(err1)) // false
+	err1 = err2              // -> {type = er, data = nil}, потому что мы положили типизированный интерфейс
+	fmt.Println(isNil(err1)) // false
 
-		err1 = nil, тк err1 остался интерфейсом, мы не присваивали значение, то заменили на nil тип
-		fmt.Println(isNil(err1)) // true
-	*/
+	err1 = nil               //, тк err1 остался интерфейсом, мы не присваивали значение, то заменили на nil тип
+	fmt.Println(isNil(err1)) // true
 
 }
 

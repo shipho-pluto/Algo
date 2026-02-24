@@ -10,7 +10,7 @@ type CarQueue struct {
 	placeStart, placeEnd int
 }
 
-func main() {
+func main() { // wierd, I think wrong test
 	arr := []CarQueue{
 		{2, 7, 5, 6},
 		{1, 9, 7, 10},

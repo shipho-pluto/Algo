@@ -27,6 +27,9 @@ func deleteSmile(s string) string {
 }
 
 func main() {
+	/*
+		WRONG!!!!!!
+	*/
 	s := "r:-)r:-))r: - )"
 	fmt.Println(deleteSmile(s))
 }

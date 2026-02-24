@@ -70,7 +70,7 @@ Loop:
 func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
-	cb := NewConcurBucket(1)
+	cb := NewConcurBucket(7)
 
 	chIn := make(chan int)
 	go func() {

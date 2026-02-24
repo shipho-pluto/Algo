@@ -129,5 +129,6 @@ func main() {
 }
 
 func Get(ctx context.Context, address string, key string) (string, error) {
+	time.Sleep(5 * time.Second)
 	return address, nil
 }

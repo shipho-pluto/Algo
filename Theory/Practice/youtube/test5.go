@@ -12,18 +12,18 @@ func GO(st *map[int][2]*TNode5, t *TNode5) int {
 	if t == nil {
 		return 0
 	}
-	ans := 1 << (t.value - 'A')
 
+	ans := 1 << (t.value - 'A')
 	ans |= GO(st, t.left)
 	ans |= GO(st, t.right)
 
-	nodes := (*st)[ans]
-	if nodes[0] == nil {
-		nodes[0] = t
-	} else if nodes[1] == nil {
-		nodes[1] = t
+	node := (*st)[ans]
+	if node[0] == nil {
+		node[0] = t
+	} else if node[1] == nil {
+		node[1] = t
 	}
-	(*st)[ans] = nodes
+	(*st)[ans] = node
 
 	return ans
 }

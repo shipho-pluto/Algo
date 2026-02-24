@@ -15,9 +15,9 @@ func howManyPlaces(l int, r int, n []int, cows int) any {
 	for l < r {
 		m := (l + r + 1) / 2
 		if approved(n, m, cows) {
-			l = m
-		} else {
 			r = m - 1
+		} else {
+			l = m
 		}
 	}
 	return l
@@ -31,5 +31,5 @@ func approved(arr []int, m, c int) bool {
 			l = r
 		}
 	}
-	return cnt >= c
+	return cnt < c
 }

@@ -16,8 +16,8 @@ func (s *S) Foo() {
 }
 
 func Build() I {
-	var res *S // type = *S, val = *nil
-	return res
+	var res *S // type = nil, val = nil
+	return res // type = *S, val = nil
 }
 
 type X struct {

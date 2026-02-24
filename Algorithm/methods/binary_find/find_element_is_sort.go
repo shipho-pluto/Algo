@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	arr := []int{-10, -1, 91, 102, 1229}
+	arr := []int{-10, -1, 0, 1, 91, 102, 1229}
 	x := 0
 	fmt.Println(findNearElement(arr, x))
 }

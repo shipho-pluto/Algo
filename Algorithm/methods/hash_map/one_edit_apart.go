@@ -36,6 +36,6 @@ func OneEditApart(s1, s2 string) bool {
 }
 
 func main() {
-	s1, s2 := "cat", "catt"
+	s1, s2 := "cat", "ttac"
 	fmt.Println(OneEditApart(s1, s2))
 }

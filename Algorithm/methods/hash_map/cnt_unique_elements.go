@@ -32,6 +32,6 @@ func cntUniqueElements(s string) int {
 }
 
 func main() {
-	s := "aabbcdb"
+	s := "abcabcabc"
 	fmt.Println(cntUniqueElements(s))
 }

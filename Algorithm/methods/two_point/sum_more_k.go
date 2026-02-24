@@ -13,7 +13,7 @@ func sumMoreK(arr []int, k int) int {
 	res := 0
 	for l, r := 0, 0; l < n; l++ {
 		for ; r < n; r++ {
-			if arr[r]-arr[l] > k {
+			if arr[r]-arr[l] >= k {
 				break
 			}
 		}

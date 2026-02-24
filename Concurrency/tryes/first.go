@@ -80,6 +80,10 @@ func (wp *WorkerPool) Start(ctx context.Context, urls []string, codes map[int]in
 
 func main() {
 	urls := make([]string, 1_000_000_000)
+	urls[0] = "www.youtube.com"
+	urls[1] = "www.twitch.com"
+	urls[2] = "www.wikipedia.com"
+	urls[3] = "www.google.com"
 	codes := make(map[int]int)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)

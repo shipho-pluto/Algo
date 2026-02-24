@@ -15,8 +15,8 @@ func main() {
 		},
 		Right: &t.Tree{Value: 100,
 			Left: &t.Tree{Value: 8,
-				Left:  &t.Tree{Value: 10},
-				Right: &t.Tree{Value: 6},
+				Left:  &t.Tree{Value: 6},
+				Right: &t.Tree{Value: 10},
 			},
 		},
 	}

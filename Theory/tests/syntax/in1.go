@@ -31,4 +31,11 @@ func main() {
 	fmt.Println(people)               // [people{}, people{age : 1}, people{}]
 
 	fmt.Println(New1() == New2()) // false
+
+	var ptr *struct{}
+	var iface interface{}
+	iface = ptr
+	if iface == nil {
+		println("It's nil!")
+	}
 }

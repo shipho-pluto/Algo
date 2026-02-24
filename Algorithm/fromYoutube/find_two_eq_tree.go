@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type TreeNode struct {
-	Val   rune
+	Value rune
 	Left  *TreeNode
 	Right *TreeNode
 }
@@ -13,7 +15,7 @@ func rec(st *map[int][2]*TreeNode, t *TreeNode) int {
 		return 0
 	}
 
-	ans := 1 << (t.Val - 'A')
+	ans := 1 << (t.Value - 'a')
 
 	ans |= rec(st, t.Left)
 	ans |= rec(st, t.Right)
@@ -57,17 +59,17 @@ func findTwoEqTree(t *TreeNode) [2]*TreeNode {
 }
 
 func main() {
-	t := &TreeNode{Val: 'A',
-		Left: &TreeNode{Val: 'B',
-			Right: &TreeNode{Val: 'C',
-				Left: &TreeNode{Val: 'D'},
+	t := &TreeNode{Value: 'a',
+		Left: &TreeNode{Value: 'b',
+			Left: &TreeNode{Value: 't'},
+			Right: &TreeNode{Value: 'u',
+				Right: &TreeNode{Value: 'e'},
 			},
 		},
-		Right: &TreeNode{Val: 'A',
-			Left: &TreeNode{Val: 'B',
-				Left: &TreeNode{Val: 'C',
-					Right: &TreeNode{Val: 'D'},
-				},
+		Right: &TreeNode{Value: 'a',
+			Left: &TreeNode{Value: 'b',
+				Left:  &TreeNode{Value: 'c'},
+				Right: &TreeNode{Value: 'd'},
 			},
 		},
 	}

@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	arr := []int{-100, -19, -8, 0, 3, 14, 59, 129}
+	arr := []int{-100, -19, -8, 0, 0, 3, 14, 59, 129}
 	fmt.Println(findLenSubarray(arr))
 }
 

@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	arr := []int{1, 1, 3, 0, 3, 1, 0, 1, 1, 2}
+	arr := []int{1, 1, 3, 0, 3, 1, 0, 1, 1}
 	fmt.Println(maxMulInWindow(arr, 3))
 	fmt.Println(maxMulInWindow2(arr, 3))
 }
